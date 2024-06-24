@@ -14,7 +14,7 @@ def process_agent_data(
     """
     road_state = "not damaged"
 
-    if agent_data.accelerometer.z < 0:
+    if agent_data.accelerometer.z < 0:  # or add more specific range
         road_state = "damaged"
 
     return ProcessedAgentData(road_state=road_state, agent_data=agent_data)
